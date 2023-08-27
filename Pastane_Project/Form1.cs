@@ -35,5 +35,19 @@ namespace Pastane_Project
             MaterialList();
         }
 
+        private void btnÜrünListesi_Click(object sender, EventArgs e)
+        {
+            ProductList();
+        }
+
+        private void btnMalzemeListesi_Click(object sender, EventArgs e)
+        {
+            MaterialList();
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

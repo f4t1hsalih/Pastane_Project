@@ -442,23 +442,24 @@
             groupBox5.Controls.Add(btnÜrünListesi);
             groupBox5.Location = new Point(745, 316);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(253, 219);
+            groupBox5.Size = new Size(250, 219);
             groupBox5.TabIndex = 12;
             groupBox5.TabStop = false;
             groupBox5.Text = "İşlemler";
             // 
             // btnCikis
             // 
-            btnCikis.Location = new Point(46, 158);
+            btnCikis.Location = new Point(43, 157);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(176, 30);
             btnCikis.TabIndex = 14;
             btnCikis.Text = "Çıkış";
             btnCikis.UseVisualStyleBackColor = true;
+            btnCikis.Click += btnCikis_Click;
             // 
             // btnKasa
             // 
-            btnKasa.Location = new Point(46, 122);
+            btnKasa.Location = new Point(43, 121);
             btnKasa.Name = "btnKasa";
             btnKasa.Size = new Size(176, 30);
             btnKasa.TabIndex = 13;
@@ -467,28 +468,30 @@
             // 
             // btnMalzemeListesi
             // 
-            btnMalzemeListesi.Location = new Point(46, 86);
+            btnMalzemeListesi.Location = new Point(43, 85);
             btnMalzemeListesi.Name = "btnMalzemeListesi";
             btnMalzemeListesi.Size = new Size(176, 30);
             btnMalzemeListesi.TabIndex = 12;
             btnMalzemeListesi.Text = "Malzeme Listesi";
             btnMalzemeListesi.UseVisualStyleBackColor = true;
+            btnMalzemeListesi.Click += btnMalzemeListesi_Click;
             // 
             // btnÜrünListesi
             // 
-            btnÜrünListesi.Location = new Point(46, 50);
+            btnÜrünListesi.Location = new Point(43, 49);
             btnÜrünListesi.Name = "btnÜrünListesi";
             btnÜrünListesi.Size = new Size(176, 30);
             btnÜrünListesi.TabIndex = 11;
             btnÜrünListesi.Text = "Ürün Listesi";
             btnÜrünListesi.UseVisualStyleBackColor = true;
+            btnÜrünListesi.Click += btnÜrünListesi_Click;
             // 
             // groupBox6
             // 
             groupBox6.Controls.Add(listBox1);
             groupBox6.Location = new Point(745, 12);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(253, 298);
+            groupBox6.Size = new Size(250, 298);
             groupBox6.TabIndex = 15;
             groupBox6.TabStop = false;
             groupBox6.Text = "Ürün Girişi";
@@ -500,7 +503,7 @@
             listBox1.ItemHeight = 21;
             listBox1.Location = new Point(3, 25);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(247, 270);
+            listBox1.Size = new Size(244, 270);
             listBox1.TabIndex = 0;
             // 
             // Form1
@@ -508,7 +511,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(149, 190, 181);
-            ClientSize = new Size(1029, 547);
+            ClientSize = new Size(1007, 547);
             Controls.Add(groupBox6);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
