@@ -45,7 +45,7 @@
             dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
             btnGuncelle = new Button();
-            btnUrunMalzemeEkle = new Button();
+            btnUrunEkle = new Button();
             label6 = new Label();
             txtProductStock = new TextBox();
             label7 = new Label();
@@ -59,13 +59,13 @@
             groupBox4 = new GroupBox();
             btnEkle = new Button();
             label12 = new Label();
-            txtMaliyet = new TextBox();
+            txtCost = new TextBox();
             label13 = new Label();
-            txtMiktar = new TextBox();
+            txtAmount = new TextBox();
             label14 = new Label();
-            txtMalzemeSec = new TextBox();
+            txtMaterial = new TextBox();
             label15 = new Label();
-            txtUrunSec = new TextBox();
+            txtProduct = new TextBox();
             groupBox5 = new GroupBox();
             btnCikis = new Button();
             btnKasa = new Button();
@@ -120,6 +120,7 @@
             btnMalzemeEkle.TabIndex = 1;
             btnMalzemeEkle.Text = "Malzeme Ekle";
             btnMalzemeEkle.UseVisualStyleBackColor = true;
+            btnMalzemeEkle.Click += btnMalzemeEkle_Click;
             // 
             // label5
             // 
@@ -196,6 +197,7 @@
             // 
             // txtMaterialid
             // 
+            txtMaterialid.Enabled = false;
             txtMaterialid.Location = new Point(91, 28);
             txtMaterialid.Name = "txtMaterialid";
             txtMaterialid.Size = new Size(138, 29);
@@ -227,7 +229,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(btnGuncelle);
-            groupBox3.Controls.Add(btnUrunMalzemeEkle);
+            groupBox3.Controls.Add(btnUrunEkle);
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(txtProductStock);
             groupBox3.Controls.Add(label7);
@@ -254,14 +256,14 @@
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // btnUrunMalzemeEkle
+            // btnUrunEkle
             // 
-            btnUrunMalzemeEkle.Location = new Point(91, 203);
-            btnUrunMalzemeEkle.Name = "btnUrunMalzemeEkle";
-            btnUrunMalzemeEkle.Size = new Size(138, 30);
-            btnUrunMalzemeEkle.TabIndex = 1;
-            btnUrunMalzemeEkle.Text = "Malzeme Ekle";
-            btnUrunMalzemeEkle.UseVisualStyleBackColor = true;
+            btnUrunEkle.Location = new Point(91, 203);
+            btnUrunEkle.Name = "btnUrunEkle";
+            btnUrunEkle.Size = new Size(138, 30);
+            btnUrunEkle.TabIndex = 1;
+            btnUrunEkle.Text = "Ürün Ekle";
+            btnUrunEkle.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -338,6 +340,7 @@
             // 
             // txtProductid
             // 
+            txtProductid.Enabled = false;
             txtProductid.Location = new Point(91, 28);
             txtProductid.Name = "txtProductid";
             txtProductid.Size = new Size(138, 29);
@@ -347,13 +350,13 @@
             // 
             groupBox4.Controls.Add(btnEkle);
             groupBox4.Controls.Add(label12);
-            groupBox4.Controls.Add(txtMaliyet);
+            groupBox4.Controls.Add(txtCost);
             groupBox4.Controls.Add(label13);
-            groupBox4.Controls.Add(txtMiktar);
+            groupBox4.Controls.Add(txtAmount);
             groupBox4.Controls.Add(label14);
-            groupBox4.Controls.Add(txtMalzemeSec);
+            groupBox4.Controls.Add(txtMaterial);
             groupBox4.Controls.Add(label15);
-            groupBox4.Controls.Add(txtUrunSec);
+            groupBox4.Controls.Add(txtProduct);
             groupBox4.Location = new Point(494, 12);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(245, 298);
@@ -379,12 +382,12 @@
             label12.TabIndex = 7;
             label12.Text = "MALİYET: ";
             // 
-            // txtMaliyet
+            // txtCost
             // 
-            txtMaliyet.Location = new Point(100, 133);
-            txtMaliyet.Name = "txtMaliyet";
-            txtMaliyet.Size = new Size(138, 29);
-            txtMaliyet.TabIndex = 6;
+            txtCost.Location = new Point(100, 133);
+            txtCost.Name = "txtCost";
+            txtCost.Size = new Size(138, 29);
+            txtCost.TabIndex = 6;
             // 
             // label13
             // 
@@ -395,12 +398,12 @@
             label13.TabIndex = 5;
             label13.Text = "MİKTAR: ";
             // 
-            // txtMiktar
+            // txtAmount
             // 
-            txtMiktar.Location = new Point(100, 98);
-            txtMiktar.Name = "txtMiktar";
-            txtMiktar.Size = new Size(138, 29);
-            txtMiktar.TabIndex = 4;
+            txtAmount.Location = new Point(100, 98);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(138, 29);
+            txtAmount.TabIndex = 4;
             // 
             // label14
             // 
@@ -411,12 +414,12 @@
             label14.TabIndex = 3;
             label14.Text = "MALZEME: ";
             // 
-            // txtMalzemeSec
+            // txtMaterial
             // 
-            txtMalzemeSec.Location = new Point(100, 63);
-            txtMalzemeSec.Name = "txtMalzemeSec";
-            txtMalzemeSec.Size = new Size(138, 29);
-            txtMalzemeSec.TabIndex = 2;
+            txtMaterial.Location = new Point(100, 63);
+            txtMaterial.Name = "txtMaterial";
+            txtMaterial.Size = new Size(138, 29);
+            txtMaterial.TabIndex = 2;
             // 
             // label15
             // 
@@ -427,12 +430,12 @@
             label15.TabIndex = 1;
             label15.Text = "ÜRÜN: ";
             // 
-            // txtUrunSec
+            // txtProduct
             // 
-            txtUrunSec.Location = new Point(100, 28);
-            txtUrunSec.Name = "txtUrunSec";
-            txtUrunSec.Size = new Size(138, 29);
-            txtUrunSec.TabIndex = 0;
+            txtProduct.Location = new Point(100, 28);
+            txtProduct.Name = "txtProduct";
+            txtProduct.Size = new Size(138, 29);
+            txtProduct.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -557,7 +560,7 @@
         private DataGridView dataGridView1;
         private GroupBox groupBox3;
         private Button btnGuncelle;
-        private Button btnUrunMalzemeEkle;
+        private Button btnUrunEkle;
         private Label label6;
         private TextBox txtProductStock;
         private Label label7;
@@ -571,13 +574,13 @@
         private GroupBox groupBox4;
         private Button btnEkle;
         private Label label12;
-        private TextBox txtMaliyet;
+        private TextBox txtCost;
         private Label label13;
-        private TextBox txtMiktar;
+        private TextBox txtAmount;
         private Label label14;
-        private TextBox txtMalzemeSec;
+        private TextBox txtMaterial;
         private Label label15;
-        private TextBox txtUrunSec;
+        private TextBox txtProduct;
         private GroupBox groupBox5;
         private Button btnCikis;
         private Button btnKasa;
