@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
             label5 = new Label();
             textBox5 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            label4 = new Label();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
             groupBox2 = new GroupBox();
+            dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
             button3 = new Button();
             button4 = new Button();
@@ -55,7 +56,6 @@
             textBox9 = new TextBox();
             label10 = new Label();
             textBox10 = new TextBox();
-            dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
             button6 = new Button();
             label12 = new Label();
@@ -67,16 +67,16 @@
             label15 = new Label();
             textBox15 = new TextBox();
             groupBox5 = new GroupBox();
-            button5 = new Button();
-            button7 = new Button();
-            button8 = new Button();
             button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            button5 = new Button();
             groupBox6 = new GroupBox();
             listBox1 = new ListBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -103,69 +103,23 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Malzeme Girişi";
             // 
-            // textBox1
+            // button2
             // 
-            textBox1.Location = new Point(91, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(138, 29);
-            textBox1.TabIndex = 0;
+            button2.Location = new Point(91, 250);
+            button2.Name = "button2";
+            button2.Size = new Size(138, 30);
+            button2.TabIndex = 10;
+            button2.Text = "Getir";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(53, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(32, 21);
-            label1.TabIndex = 1;
-            label1.Text = "ID: ";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(47, 66);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 21);
-            label2.TabIndex = 3;
-            label2.Text = "AD: ";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(91, 63);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 29);
-            textBox2.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(31, 101);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 21);
-            label3.TabIndex = 5;
-            label3.Text = "STOK: ";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(91, 98);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(138, 29);
-            textBox3.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(31, 136);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 21);
-            label4.TabIndex = 7;
-            label4.Text = "FİYAT: ";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(91, 133);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(138, 29);
-            textBox4.TabIndex = 6;
+            button1.Location = new Point(91, 203);
+            button1.Name = "button1";
+            button1.Size = new Size(138, 30);
+            button1.TabIndex = 1;
+            button1.Text = "Malzeme Ekle";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -183,23 +137,69 @@
             textBox5.Size = new Size(138, 29);
             textBox5.TabIndex = 8;
             // 
-            // button1
+            // label4
             // 
-            button1.Location = new Point(91, 203);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 30);
-            button1.TabIndex = 1;
-            button1.Text = "Malzeme Ekle";
-            button1.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(31, 136);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 21);
+            label4.TabIndex = 7;
+            label4.Text = "FİYAT: ";
             // 
-            // button2
+            // textBox4
             // 
-            button2.Location = new Point(91, 250);
-            button2.Name = "button2";
-            button2.Size = new Size(138, 30);
-            button2.TabIndex = 10;
-            button2.Text = "Getir";
-            button2.UseVisualStyleBackColor = true;
+            textBox4.Location = new Point(91, 133);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(138, 29);
+            textBox4.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(31, 101);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 21);
+            label3.TabIndex = 5;
+            label3.Text = "STOK: ";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(91, 98);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(138, 29);
+            textBox3.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(47, 66);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 21);
+            label2.TabIndex = 3;
+            label2.Text = "AD: ";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(91, 63);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(138, 29);
+            textBox2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(53, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 21);
+            label1.TabIndex = 1;
+            label1.Text = "ID: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(91, 28);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(138, 29);
+            textBox1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -210,6 +210,19 @@
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             groupBox2.Text = "Malzemeler";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(3, 25);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(721, 191);
+            dataGridView1.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -330,18 +343,6 @@
             textBox10.Size = new Size(138, 29);
             textBox10.TabIndex = 0;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 25);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(721, 191);
-            dataGridView1.TabIndex = 0;
-            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(button6);
@@ -446,23 +447,14 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "İşlemler";
             // 
-            // button5
+            // button9
             // 
-            button5.Location = new Point(46, 50);
-            button5.Name = "button5";
-            button5.Size = new Size(176, 30);
-            button5.TabIndex = 11;
-            button5.Text = "Ürün Listesi";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Location = new Point(46, 86);
-            button7.Name = "button7";
-            button7.Size = new Size(176, 30);
-            button7.TabIndex = 12;
-            button7.Text = "Malzeme Listesi";
-            button7.UseVisualStyleBackColor = true;
+            button9.Location = new Point(46, 158);
+            button9.Name = "button9";
+            button9.Size = new Size(176, 30);
+            button9.TabIndex = 14;
+            button9.Text = "Çıkış";
+            button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -473,14 +465,23 @@
             button8.Text = "Kasa";
             button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // button7
             // 
-            button9.Location = new Point(46, 158);
-            button9.Name = "button9";
-            button9.Size = new Size(176, 30);
-            button9.TabIndex = 14;
-            button9.Text = "Çıkış";
-            button9.UseVisualStyleBackColor = true;
+            button7.Location = new Point(46, 86);
+            button7.Name = "button7";
+            button7.Size = new Size(176, 30);
+            button7.TabIndex = 12;
+            button7.Text = "Malzeme Listesi";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(46, 50);
+            button5.Name = "button5";
+            button5.Size = new Size(176, 30);
+            button5.TabIndex = 11;
+            button5.Text = "Ürün Listesi";
+            button5.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -516,15 +517,16 @@
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.FromArgb(42, 57, 76);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Pasta Hane";
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
