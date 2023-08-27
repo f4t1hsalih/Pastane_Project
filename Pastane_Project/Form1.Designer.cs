@@ -465,6 +465,7 @@
             btnKasa.TabIndex = 13;
             btnKasa.Text = "Kasa";
             btnKasa.UseVisualStyleBackColor = true;
+            btnKasa.Click += btnKasa_Click;
             // 
             // btnMalzemeListesi
             // 
