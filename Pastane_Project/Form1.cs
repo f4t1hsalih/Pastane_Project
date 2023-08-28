@@ -71,12 +71,26 @@ namespace Pastane_Project
             con.Close();
         }
 
+        private void Materials()
+        {
+            con.Open();
+            string command = "select material_id, name from tbl_materials";
+            SqlCommand cmd = new SqlCommand(command, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmbMaterial.Items.Add(dr[1]);
+            }
+            con.Close();
+        }
+
         //---
 
         private void Form1_Load(object sender, EventArgs e)
         {
             MaterialList();
             Products();
+            Materials();
         }
 
         private void btnÜrünListesi_Click(object sender, EventArgs e)
