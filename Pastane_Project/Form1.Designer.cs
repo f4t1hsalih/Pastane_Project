@@ -57,6 +57,8 @@
             label10 = new Label();
             txtProductid = new TextBox();
             groupBox4 = new GroupBox();
+            cmbMaterial = new ComboBox();
+            cmbProduct = new ComboBox();
             btnEkle = new Button();
             label12 = new Label();
             txtCost = new TextBox();
@@ -71,8 +73,6 @@
             btnÜrünListesi = new Button();
             groupBox6 = new GroupBox();
             listBox1 = new ListBox();
-            cmbProduct = new ComboBox();
-            cmbMaterial = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -367,6 +367,24 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Ürün Oluştur";
             // 
+            // cmbMaterial
+            // 
+            cmbMaterial.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMaterial.FormattingEnabled = true;
+            cmbMaterial.Location = new Point(100, 63);
+            cmbMaterial.Name = "cmbMaterial";
+            cmbMaterial.Size = new Size(138, 29);
+            cmbMaterial.TabIndex = 9;
+            // 
+            // cmbProduct
+            // 
+            cmbProduct.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbProduct.FormattingEnabled = true;
+            cmbProduct.Location = new Point(100, 28);
+            cmbProduct.Name = "cmbProduct";
+            cmbProduct.Size = new Size(138, 29);
+            cmbProduct.TabIndex = 8;
+            // 
             // btnEkle
             // 
             btnEkle.Location = new Point(100, 168);
@@ -498,22 +516,6 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(244, 270);
             listBox1.TabIndex = 0;
-            // 
-            // cmbProduct
-            // 
-            cmbProduct.FormattingEnabled = true;
-            cmbProduct.Location = new Point(100, 28);
-            cmbProduct.Name = "cmbProduct";
-            cmbProduct.Size = new Size(138, 29);
-            cmbProduct.TabIndex = 8;
-            // 
-            // cmbMaterial
-            // 
-            cmbMaterial.FormattingEnabled = true;
-            cmbMaterial.Location = new Point(100, 63);
-            cmbMaterial.Name = "cmbMaterial";
-            cmbMaterial.Size = new Size(138, 29);
-            cmbMaterial.TabIndex = 9;
             // 
             // Form1
             // 

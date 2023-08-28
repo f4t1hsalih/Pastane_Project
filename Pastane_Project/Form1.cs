@@ -58,11 +58,25 @@ namespace Pastane_Project
             txtProductStock.Clear();
         }
 
+        private void Products()
+        {
+            con.Open();
+            string command = "select product_id, name from tbl_products";
+            SqlCommand cmd = new SqlCommand(command, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmbProduct.Items.Add(dr[1]);
+            }
+            con.Close();
+        }
+
         //---
 
         private void Form1_Load(object sender, EventArgs e)
         {
             MaterialList();
+            Products();
         }
 
         private void btnÜrünListesi_Click(object sender, EventArgs e)
