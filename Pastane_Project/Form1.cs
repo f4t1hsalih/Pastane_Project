@@ -42,7 +42,6 @@ namespace Pastane_Project
 
         private void MaterialClear()
         {
-            txtMaterialid.Clear();
             txtMaterialName.Clear();
             txtMaterialStock.Clear();
             txtMaterialPrice.Clear();
@@ -51,11 +50,8 @@ namespace Pastane_Project
 
         private void ProductClear()
         {
-            txtProductid.Clear();
             txtProductName.Clear();
             txtProductBPrice.Clear();
-            txtProductSPrice.Clear();
-            txtProductStock.Clear();
         }
 
         private void MaterialAddClear()
@@ -109,6 +105,11 @@ namespace Pastane_Project
             {
                 return 0;
             }
+        }
+
+        private double TotalCostCalculation()
+        {
+            return 0;
         }
 
         //---
@@ -212,6 +213,25 @@ namespace Pastane_Project
             {
                 txtAmount.SelectAll();
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selected = dataGridView1.SelectedCells[0].RowIndex;
+
+            string prouctid = dataGridView1.Rows[selected].Cells[0].Value.ToString();
+            txtProductName.Text = dataGridView1.Rows[selected].Cells[1].Value.ToString();
+
+            con.Open();
+            string command = "select sum(cost) from tbl_oven where product_id = @p1";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", prouctid);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                txtProductBPrice.Text = dr[0].ToString();
+            }
+            con.Close();
         }
     }
 }
