@@ -103,13 +103,27 @@ namespace Pastane_Project
             }
             else
             {
+                con.Close();
                 return 0;
             }
         }
 
-        private double TotalCostCalculation()
+        private double TotalCostCalculation(string id)
         {
-            return 0;
+            con.Open();
+            string command = "select sum(cost) from tbl_oven where product_id = @p1";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", id);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return Convert.ToDouble(dr[0]);
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
         }
 
         //---
@@ -186,6 +200,8 @@ namespace Pastane_Project
 
             MessageBox.Show("Malzeme Eklendi");
             MaterialAddClear();
+
+            ProductList();
         }
 
         private void txtAmount_TextChanged(object sender, EventArgs e)
@@ -221,17 +237,8 @@ namespace Pastane_Project
 
             string prouctid = dataGridView1.Rows[selected].Cells[0].Value.ToString();
             txtProductName.Text = dataGridView1.Rows[selected].Cells[1].Value.ToString();
+            txtProductBPrice.Text = TotalCostCalculation(prouctid).ToString();
 
-            con.Open();
-            string command = "select sum(cost) from tbl_oven where product_id = @p1";
-            SqlCommand cmd = new SqlCommand(command, con);
-            cmd.Parameters.AddWithValue("@p1", prouctid);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                txtProductBPrice.Text = dr[0].ToString();
-            }
-            con.Close();
         }
     }
 }

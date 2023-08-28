@@ -215,6 +215,7 @@
             // 
             // txtProductBPrice
             // 
+            txtProductBPrice.Enabled = false;
             txtProductBPrice.Location = new Point(91, 136);
             txtProductBPrice.Name = "txtProductBPrice";
             txtProductBPrice.Size = new Size(138, 29);
