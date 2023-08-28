@@ -34,7 +34,7 @@
             label5 = new Label();
             txtMaterialNotes = new TextBox();
             label4 = new Label();
-            TxtMaterialPrice = new TextBox();
+            txtMaterialPrice = new TextBox();
             label3 = new Label();
             txtMaterialStock = new TextBox();
             label2 = new Label();
@@ -89,7 +89,7 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txtMaterialNotes);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(TxtMaterialPrice);
+            groupBox1.Controls.Add(txtMaterialPrice);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txtMaterialStock);
             groupBox1.Controls.Add(label2);
@@ -147,12 +147,12 @@
             label4.TabIndex = 7;
             label4.Text = "FİYAT: ";
             // 
-            // TxtMaterialPrice
+            // txtMaterialPrice
             // 
-            TxtMaterialPrice.Location = new Point(91, 133);
-            TxtMaterialPrice.Name = "TxtMaterialPrice";
-            TxtMaterialPrice.Size = new Size(138, 29);
-            TxtMaterialPrice.TabIndex = 6;
+            txtMaterialPrice.Location = new Point(91, 133);
+            txtMaterialPrice.Name = "txtMaterialPrice";
+            txtMaterialPrice.Size = new Size(138, 29);
+            txtMaterialPrice.TabIndex = 6;
             // 
             // label3
             // 
@@ -182,6 +182,7 @@
             // txtMaterialName
             // 
             txtMaterialName.Location = new Point(91, 63);
+            txtMaterialName.MaxLength = 30;
             txtMaterialName.Name = "txtMaterialName";
             txtMaterialName.Size = new Size(138, 29);
             txtMaterialName.TabIndex = 2;
@@ -264,6 +265,7 @@
             btnUrunEkle.TabIndex = 1;
             btnUrunEkle.Text = "Ürün Ekle";
             btnUrunEkle.UseVisualStyleBackColor = true;
+            btnUrunEkle.Click += btnUrunEkle_Click;
             // 
             // label6
             // 
@@ -325,6 +327,7 @@
             // txtProductName
             // 
             txtProductName.Location = new Point(91, 63);
+            txtProductName.MaxLength = 30;
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(138, 29);
             txtProductName.TabIndex = 2;
@@ -550,7 +553,7 @@
         private Label label5;
         private TextBox txtMaterialNotes;
         private Label label4;
-        private TextBox TxtMaterialPrice;
+        private TextBox txtMaterialPrice;
         private Label label3;
         private TextBox txtMaterialStock;
         private Label label2;

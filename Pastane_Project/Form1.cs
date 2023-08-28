@@ -1,7 +1,6 @@
 using System.Data;
 using System.Data.SqlClient;
 
-
 //FS
 namespace Pastane_Project
 {
@@ -46,8 +45,17 @@ namespace Pastane_Project
             txtMaterialid.Clear();
             txtMaterialName.Clear();
             txtMaterialStock.Clear();
-            TxtMaterialPrice.Clear();
+            txtMaterialPrice.Clear();
             txtMaterialNotes.Clear();
+        }
+
+        private void ProductClear()
+        {
+            txtProductid.Clear();
+            txtProductName.Clear();
+            txtProductBPrice.Clear();
+            txtProductSPrice.Clear();
+            txtProductStock.Clear();
         }
 
         //---
@@ -84,7 +92,7 @@ namespace Pastane_Project
             SqlCommand cmd = new SqlCommand(command, con);
             cmd.Parameters.AddWithValue("@p1", txtMaterialName.Text);
             cmd.Parameters.AddWithValue("@p2", decimal.Parse(txtMaterialStock.Text));
-            cmd.Parameters.AddWithValue("@p3", decimal.Parse(TxtMaterialPrice.Text));
+            cmd.Parameters.AddWithValue("@p3", decimal.Parse(txtMaterialPrice.Text));
             cmd.Parameters.AddWithValue("@p4", txtMaterialNotes.Text);
             cmd.ExecuteNonQuery();
             con.Close();
@@ -92,6 +100,20 @@ namespace Pastane_Project
 
             MaterialClear();
             MaterialList();
+        }
+
+        private void btnUrunEkle_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string command = "insert into tbl_products(name) values (@p1)";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", txtProductName.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Ürün Sisteme Kaydedildi");
+
+            ProductClear();
+            ProductList();
         }
     }
 }
