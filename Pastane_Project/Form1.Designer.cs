@@ -56,6 +56,8 @@
             txtAmount = new TextBox();
             label14 = new Label();
             label15 = new Label();
+            label1 = new Label();
+            textBox1 = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -76,7 +78,7 @@
             groupBox1.Controls.Add(txtMaterialName);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(235, 215);
+            groupBox1.Size = new Size(235, 213);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Malzeme Girişi";
@@ -159,9 +161,9 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(12, 233);
+            groupBox2.Location = new Point(12, 231);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(730, 216);
+            groupBox2.Size = new Size(730, 232);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             groupBox2.Text = "Malzemeler";
@@ -176,12 +178,14 @@
             dataGridView1.Location = new Point(3, 25);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(724, 188);
+            dataGridView1.Size = new Size(724, 204);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label1);
+            groupBox3.Controls.Add(textBox1);
             groupBox3.Controls.Add(btnUrunEkle);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(txtProductBPrice);
@@ -189,7 +193,7 @@
             groupBox3.Controls.Add(txtProductName);
             groupBox3.Location = new Point(253, 12);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(235, 215);
+            groupBox3.Size = new Size(235, 213);
             groupBox3.TabIndex = 11;
             groupBox3.TabStop = false;
             groupBox3.Text = "Ürün Girişi";
@@ -207,18 +211,18 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(14, 139);
+            label8.Location = new Point(6, 117);
             label8.Name = "label8";
-            label8.Size = new Size(71, 21);
+            label8.Size = new Size(130, 21);
             label8.TabIndex = 5;
-            label8.Text = "M.FİYAT: ";
+            label8.Text = "ÜRÜN MALİYETİ: ";
             // 
             // txtProductBPrice
             // 
             txtProductBPrice.Enabled = false;
-            txtProductBPrice.Location = new Point(91, 136);
+            txtProductBPrice.Location = new Point(142, 114);
             txtProductBPrice.Name = "txtProductBPrice";
-            txtProductBPrice.Size = new Size(138, 29);
+            txtProductBPrice.Size = new Size(87, 29);
             txtProductBPrice.TabIndex = 4;
             // 
             // label9
@@ -251,7 +255,7 @@
             groupBox4.Controls.Add(label15);
             groupBox4.Location = new Point(494, 12);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(248, 215);
+            groupBox4.Size = new Size(248, 213);
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             groupBox4.Text = "Ürün Oluştur";
@@ -339,12 +343,29 @@
             label15.TabIndex = 1;
             label15.Text = "ÜRÜN: ";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(26, 156);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 21);
+            label1.TabIndex = 7;
+            label1.Text = "SATIŞ TUTARI: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(142, 153);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(87, 29);
+            textBox1.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(149, 190, 181);
-            ClientSize = new Size(754, 459);
+            ClientSize = new Size(754, 475);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -396,5 +417,7 @@
         private Label label15;
         private ComboBox cmbMaterial;
         private ComboBox cmbProduct;
+        private Label label1;
+        private TextBox textBox1;
     }
 }
