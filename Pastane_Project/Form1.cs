@@ -58,6 +58,14 @@ namespace Pastane_Project
             txtProductStock.Clear();
         }
 
+        private void MaterialAddClear()
+        {
+            cmbProduct.SelectedIndex = 0;
+            cmbMaterial.SelectedIndex = 0;
+            txtAmount.Clear();
+            txtCost.Clear();
+        }
+
         private void Products()
         {
             con.Open();
@@ -150,13 +158,14 @@ namespace Pastane_Project
             string command = "insert into tbl_oven(product_id, material_id, amount, cost) values (@p1, @p2, @p3, @p4)";
             SqlCommand cmd = new SqlCommand(command, con);
             cmd.Parameters.AddWithValue("@p1", cmbProduct.SelectedValue);
-            cmd.Parameters.AddWithValue("@p2", cmbProduct.SelectedValue);
+            cmd.Parameters.AddWithValue("@p2", cmbMaterial.SelectedValue);
             cmd.Parameters.AddWithValue("@p3", decimal.Parse(txtAmount.Text));
             cmd.Parameters.AddWithValue("@p4", decimal.Parse(txtCost.Text));
             cmd.ExecuteNonQuery();
             con.Close();
 
             MessageBox.Show("Malzeme Eklendi");
+            MaterialAddClear();
         }
     }
 }
