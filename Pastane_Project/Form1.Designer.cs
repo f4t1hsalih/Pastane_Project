@@ -393,6 +393,7 @@
             btnEkle.TabIndex = 1;
             btnEkle.Text = "Ekle";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // label12
             // 

@@ -62,7 +62,7 @@ namespace Pastane_Project
         {
             con.Open();
             string command = "select product_id, name from tbl_products";
-            SqlDataAdapter da = new SqlDataAdapter(command, con );
+            SqlDataAdapter da = new SqlDataAdapter(command, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cmbProduct.ValueMember = "product_id";
@@ -142,6 +142,21 @@ namespace Pastane_Project
 
             ProductClear();
             ProductList();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string command = "insert into tbl_oven(product_id, material_id, amount, cost) values (@p1, @p2, @p3, @p4)";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", cmbProduct.SelectedValue);
+            cmd.Parameters.AddWithValue("@p2", cmbProduct.SelectedValue);
+            cmd.Parameters.AddWithValue("@p3", decimal.Parse(txtAmount.Text));
+            cmd.Parameters.AddWithValue("@p4", decimal.Parse(txtCost.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Malzeme Eklendi");
         }
     }
 }
