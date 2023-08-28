@@ -62,12 +62,12 @@ namespace Pastane_Project
         {
             con.Open();
             string command = "select product_id, name from tbl_products";
-            SqlCommand cmd = new SqlCommand(command, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                cmbProduct.Items.Add(dr[1]);
-            }
+            SqlDataAdapter da = new SqlDataAdapter(command, con );
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmbProduct.ValueMember = "product_id";
+            cmbProduct.DisplayMember = "name";
+            cmbProduct.DataSource = dt;
             con.Close();
         }
 
@@ -75,12 +75,12 @@ namespace Pastane_Project
         {
             con.Open();
             string command = "select material_id, name from tbl_materials";
-            SqlCommand cmd = new SqlCommand(command, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                cmbMaterial.Items.Add(dr[1]);
-            }
+            SqlDataAdapter da = new SqlDataAdapter(command, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmbMaterial.ValueMember = "material_id";
+            cmbMaterial.DisplayMember = "name";
+            cmbMaterial.DataSource = dt;
             con.Close();
         }
 
