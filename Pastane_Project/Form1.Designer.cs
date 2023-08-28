@@ -63,9 +63,7 @@
             label13 = new Label();
             txtAmount = new TextBox();
             label14 = new Label();
-            txtMaterial = new TextBox();
             label15 = new Label();
-            txtProduct = new TextBox();
             groupBox5 = new GroupBox();
             btnCikis = new Button();
             btnKasa = new Button();
@@ -73,6 +71,8 @@
             btnÜrünListesi = new Button();
             groupBox6 = new GroupBox();
             listBox1 = new ListBox();
+            cmbProduct = new ComboBox();
+            cmbMaterial = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -351,15 +351,15 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(cmbMaterial);
+            groupBox4.Controls.Add(cmbProduct);
             groupBox4.Controls.Add(btnEkle);
             groupBox4.Controls.Add(label12);
             groupBox4.Controls.Add(txtCost);
             groupBox4.Controls.Add(label13);
             groupBox4.Controls.Add(txtAmount);
             groupBox4.Controls.Add(label14);
-            groupBox4.Controls.Add(txtMaterial);
             groupBox4.Controls.Add(label15);
-            groupBox4.Controls.Add(txtProduct);
             groupBox4.Location = new Point(494, 12);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(245, 298);
@@ -417,13 +417,6 @@
             label14.TabIndex = 3;
             label14.Text = "MALZEME: ";
             // 
-            // txtMaterial
-            // 
-            txtMaterial.Location = new Point(100, 63);
-            txtMaterial.Name = "txtMaterial";
-            txtMaterial.Size = new Size(138, 29);
-            txtMaterial.TabIndex = 2;
-            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -432,13 +425,6 @@
             label15.Size = new Size(61, 21);
             label15.TabIndex = 1;
             label15.Text = "ÜRÜN: ";
-            // 
-            // txtProduct
-            // 
-            txtProduct.Location = new Point(100, 28);
-            txtProduct.Name = "txtProduct";
-            txtProduct.Size = new Size(138, 29);
-            txtProduct.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -513,6 +499,22 @@
             listBox1.Size = new Size(244, 270);
             listBox1.TabIndex = 0;
             // 
+            // cmbProduct
+            // 
+            cmbProduct.FormattingEnabled = true;
+            cmbProduct.Location = new Point(100, 28);
+            cmbProduct.Name = "cmbProduct";
+            cmbProduct.Size = new Size(138, 29);
+            cmbProduct.TabIndex = 8;
+            // 
+            // cmbMaterial
+            // 
+            cmbMaterial.FormattingEnabled = true;
+            cmbMaterial.Location = new Point(100, 63);
+            cmbMaterial.Name = "cmbMaterial";
+            cmbMaterial.Size = new Size(138, 29);
+            cmbMaterial.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -581,9 +583,7 @@
         private Label label13;
         private TextBox txtAmount;
         private Label label14;
-        private TextBox txtMaterial;
         private Label label15;
-        private TextBox txtProduct;
         private GroupBox groupBox5;
         private Button btnCikis;
         private Button btnKasa;
@@ -591,5 +591,7 @@
         private Button btnÜrünListesi;
         private GroupBox groupBox6;
         private ListBox listBox1;
+        private ComboBox cmbMaterial;
+        private ComboBox cmbProduct;
     }
 }
