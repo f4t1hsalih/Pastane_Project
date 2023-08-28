@@ -406,10 +406,12 @@
             // 
             // txtCost
             // 
+            txtCost.Enabled = false;
             txtCost.Location = new Point(100, 133);
             txtCost.Name = "txtCost";
             txtCost.Size = new Size(138, 29);
             txtCost.TabIndex = 6;
+            txtCost.Text = "0";
             // 
             // label13
             // 
@@ -426,6 +428,9 @@
             txtAmount.Name = "txtAmount";
             txtAmount.Size = new Size(138, 29);
             txtAmount.TabIndex = 4;
+            txtAmount.Text = "0";
+            txtAmount.Click += txtAmount_Click;
+            txtAmount.TextChanged += txtAmount_TextChanged;
             // 
             // label14
             // 

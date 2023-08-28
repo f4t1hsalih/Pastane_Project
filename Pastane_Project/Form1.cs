@@ -92,6 +92,25 @@ namespace Pastane_Project
             con.Close();
         }
 
+        private double CostCalculation()
+        {
+            con.Open();
+            string command = "select price from tbl_materials where material_id = @p1";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", cmbMaterial.SelectedValue);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                double price = Convert.ToDouble(dr[0].ToString());
+                con.Close();
+                return price;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         //---
 
         private void Form1_Load(object sender, EventArgs e)
@@ -166,6 +185,33 @@ namespace Pastane_Project
 
             MessageBox.Show("Malzeme Eklendi");
             MaterialAddClear();
+        }
+
+        private void txtAmount_TextChanged(object sender, EventArgs e)
+        {
+            double price = 0, cost = 0;
+
+            if (txtAmount.Text == "")
+            {
+                txtAmount.Text = "0";
+            }
+            if (txtAmount.Text == "0")
+            {
+                txtAmount.SelectAll();
+            }
+
+            price = CostCalculation();
+
+            cost = price / 1000 * Convert.ToDouble(txtAmount.Text);
+            txtCost.Text = cost.ToString();
+        }
+
+        private void txtAmount_Click(object sender, EventArgs e)
+        {
+            if (txtAmount.Text == "0")
+            {
+                txtAmount.SelectAll();
+            }
         }
     }
 }
