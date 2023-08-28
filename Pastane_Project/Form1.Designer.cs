@@ -41,6 +41,8 @@
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
+            label1 = new Label();
+            txtProductSPrice = new TextBox();
             btnUrunEkle = new Button();
             label8 = new Label();
             txtProductBPrice = new TextBox();
@@ -56,8 +58,6 @@
             txtAmount = new TextBox();
             label14 = new Label();
             label15 = new Label();
-            label1 = new Label();
-            textBox1 = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -185,7 +185,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(label1);
-            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(txtProductSPrice);
             groupBox3.Controls.Add(btnUrunEkle);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(txtProductBPrice);
@@ -197,6 +197,23 @@
             groupBox3.TabIndex = 11;
             groupBox3.TabStop = false;
             groupBox3.Text = "Ürün Girişi";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(26, 156);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 21);
+            label1.TabIndex = 7;
+            label1.Text = "SATIŞ TUTARI: ";
+            // 
+            // txtProductSPrice
+            // 
+            txtProductSPrice.Enabled = false;
+            txtProductSPrice.Location = new Point(142, 153);
+            txtProductSPrice.Name = "txtProductSPrice";
+            txtProductSPrice.Size = new Size(87, 29);
+            txtProductSPrice.TabIndex = 6;
             // 
             // btnUrunEkle
             // 
@@ -224,6 +241,7 @@
             txtProductBPrice.Name = "txtProductBPrice";
             txtProductBPrice.Size = new Size(87, 29);
             txtProductBPrice.TabIndex = 4;
+            txtProductBPrice.TextChanged += txtProductBPrice_TextChanged;
             // 
             // label9
             // 
@@ -343,23 +361,6 @@
             label15.TabIndex = 1;
             label15.Text = "ÜRÜN: ";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(26, 156);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 21);
-            label1.TabIndex = 7;
-            label1.Text = "SATIŞ TUTARI: ";
-            // 
-            // textBox1
-            // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(142, 153);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(87, 29);
-            textBox1.TabIndex = 6;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -418,6 +419,6 @@
         private ComboBox cmbMaterial;
         private ComboBox cmbProduct;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtProductSPrice;
     }
 }

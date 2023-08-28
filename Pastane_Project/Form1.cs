@@ -130,7 +130,7 @@ namespace Pastane_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MaterialList();
+            ProductList();
             Products();
             Materials();
         }
@@ -239,6 +239,11 @@ namespace Pastane_Project
             txtProductName.Text = dataGridView1.Rows[selected].Cells[1].Value.ToString();
             txtProductBPrice.Text = TotalCostCalculation(prouctid).ToString();
 
+        }
+
+        private void txtProductBPrice_TextChanged(object sender, EventArgs e)
+        {
+            txtProductSPrice.Text = (Convert.ToDouble(txtProductBPrice.Text) * 1.5).ToString();
         }
     }
 }
